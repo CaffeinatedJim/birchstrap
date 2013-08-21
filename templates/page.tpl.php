@@ -46,11 +46,11 @@
           <?php endif; ?>
 
           <?php if ( $page['left'] ): ?>
-            <div class="span4" id="left">
+            <div class="span<?php print $left_span ?>" id="left">
               <?php print render($page['left']); ?>
             </div>
           <?php endif; ?>
-          <div class="span12" id="main-content">
+          <div class="span<?php print $main_span ?>" id="main-content">
             <?php if ($breadcrumb): ?><div id="breadcrumb"><?php print $breadcrumb; ?></div><?php endif; ?>
             <?php if (!empty($messages)): ?><div id="messages"><?php print $messages; ?></div><?php endif; ?>
             <?php print render($title_prefix); ?>
@@ -63,7 +63,7 @@
             <?php print $feed_icons; ?>
           </div>
           <?php if ( $page['right'] ): ?>
-            <div class="span4" id="right">
+            <div class="span<?php print $right_span ?>" id="right">
               <?php print render($page['right']); ?>
             </div>
           <?php endif; ?>
