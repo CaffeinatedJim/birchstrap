@@ -18,18 +18,18 @@ function birchstrap_form_system_theme_settings_alter(&$form, &$form_state) {
   );
 
   $spans = array(
-    1 => 'span1',
-    2 => 'span2',
-    3 => 'span3',
-    4 => 'span4',
-    5 => 'span5',
-    6 => 'span6',
-    7 => 'span7',
-    8 => 'span8',
-    9 => 'span9',
-    10 => 'span10',
-    11 => 'span11',
-    12 => 'span12',
+    1 => 'col-md-1',
+    2 => 'col-md-2',
+    3 => 'col-md-3',
+    4 => 'col-md-4',
+    5 => 'col-md-5',
+    6 => 'col-md-6',
+    7 => 'col-md-7',
+    8 => 'col-md-8',
+    9 => 'col-md-9',
+    10 => 'col-md-10',
+    11 => 'col-md-11',
+    12 => 'col-md-12',
   );
 
   $form['birchstrap_columns']['birchstrap_left_span'] = array(
