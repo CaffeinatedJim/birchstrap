@@ -1,21 +1,25 @@
 name = Birchstrap
 description = Base Theme using Bootstrap 3, for Drupal 7
-version = 2.0
+version = 3.0
 core = 7.x
 engine = phptemplate
 
 stylesheets[all][] = bootstrap/css/bootstrap.min.css
-stylesheets[all][] = bootstrap/css/bootstrap-theme.min.css
+stylesheets[all][] = bootstrap/css/bootstrap-responsive.min.css
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/screen_0-767.css
-stylesheets[all][] = css/screen_768-992.css
-stylesheets[all][] = css/screen_993+.css
+stylesheets[all][] = css/screen_0-320.css
+stylesheets[all][] = css/screen_321-480.css
+stylesheets[all][] = css/screen_481-767.css
+stylesheets[all][] = css/screen_768-979.css
+stylesheets[all][] = css/screen_980-and-up.css
+stylesheets[all][] = css/screen_1080x1920.css
+stylesheets[all][] = css/screen_1920x1080.css
 stylesheets[print][] = css/print.css
 
-scripts[] = js/jquery-1.10.2.min.js
 scripts[] = js/html5shiv.js
+scripts[] = js/jquery-1.10.2.min.js
 scripts[] = bootstrap/js/bootstrap.min.js
-scripts[] = js/noconflict.js
+scripts[] = js/jquery-noconflict.js
 
 regions[header] = Header
 regions[navigation] = Navigation
