@@ -1,6 +1,6 @@
       <header id="navbar" role="banner" class="navbar navbar-static-top">
         <div class="navbar-inner">
-          <div class="container-fluid">
+          <div class="container">
             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
@@ -15,9 +15,9 @@
             <?php endif; ?>
 
             <?php if (!empty($site_name)): ?>
-              <h1 id="site-name">
+              <span id="site-name">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="brand"><?php print $site_name; ?></a>
-              </h1>
+              </span>
             <?php endif; ?>
 
             <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
@@ -39,18 +39,18 @@
         </div>
       </header>
 
-      <div id="main-content-row" class="container-fluid">
-        <div class="row-fluid">
+      <div id="main-content-row" class="container">
+        <div class="row">
           <?php if ( $page['hero'] ): ?>
-            <div id="hero" class="row-fluid"><?php print render($page['hero']); ?></div>
+            <div id="hero" class="row"><?php print render($page['hero']); ?></div>
           <?php endif; ?>
 
           <?php if ( $page['left'] ): ?>
-            <div class="span4" id="left">
+            <div class="col-sm-4" id="left">
               <?php print render($page['left']); ?>
             </div>
           <?php endif; ?>
-          <div class="span12" id="main-content">
+          <div class="col-sm-12" id="main-content">
             <?php if ($breadcrumb): ?><div id="breadcrumb"><?php print $breadcrumb; ?></div><?php endif; ?>
             <?php if (!empty($messages)): ?><div id="messages"><?php print $messages; ?></div><?php endif; ?>
             <?php print render($title_prefix); ?>
@@ -63,14 +63,14 @@
             <?php print $feed_icons; ?>
           </div>
           <?php if ( $page['right'] ): ?>
-            <div class="span4" id="right">
+            <div class="col-sm-4" id="right">
               <?php print render($page['right']); ?>
             </div>
           <?php endif; ?>
         </div>
-      </div><!-- Close container-fluid -->
-      <footer id="footer" class="container-fluid">
-        <div class="row-fluid">
+      </div><!-- Close container -->
+      <footer id="footer" class="container">
+        <div class="row">
           <?php print render($page['footer']); ?>
         </div>
       </footer>
