@@ -1,6 +1,6 @@
 name = Birchstrap
 description = Base Theme using Bootstrap 3, for Drupal 6
-version = 1.0
+version = 3.0
 core = 6.x
 engine = phptemplate
 
