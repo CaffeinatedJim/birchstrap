@@ -14,35 +14,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php print $scripts; ?>
-
   </head>
   <body class="<?php print $body_classes; ?>">
     <div class="skip"><a href="#main-content" title="Skip to Content">Skip to Content</a></div>
-    	<div class="container">
-        <header id="header" class="row">
-        	<div class="col-sm-12">
-  			  <?php if (!empty($header)): ?>
-               <?php print $header; ?>
-             <?php endif; ?>
-          </div>
-        </header>
-      </div>
-    <div class="container">
-      <div class="navbar navbar-inverse">
-        <div class="btn-navbar-container">  
-            <a href="javascript:ReverseDisplay('navigation')"><button class="btn btn-navbar" type="button" >
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button></a>
-        </div>
-      	<div id="navigation" class="row <?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> " style="display: none;">
-          <?php if (!empty($navigation)): ?><?php print $navigation; ?><?php endif; ?>
-          <?php if (!empty($primary_links)): ?><div id="primary" class="clear-block"><?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?></div><?php endif; ?>
-          <?php if (!empty($secondary_links)): ?><div id="secondary" class="clear-block"><?php print theme('links', $secondary_links, array('class' => 'links secondary-links')); ?></div><?php endif; ?>
-        </div>
-      </div>
-    </div>
+    <?php if (!empty($header)): ?><div class="container"><header id="header" class="row"><div class="col-sm-12"><?php print $header; ?></div></header></div><?php endif; ?>
     <?php if (!empty($hero)): ?><div class="container"><div class="row"><div id="hero" class="col-sm-12"><?php print $hero; ?></div></div></div><?php endif; ?>
     <?php if (!empty($tabs)): ?><div class="container"><div class="row"><div class="tabs col-sm-12"><?php print $tabs; ?></div></div></div><?php endif; ?>
     <?php if (!empty($messages)): ?><div class="container"><div class="row"><div class="messages col-sm-12"><?php print $messages; ?></div></div></div><?php endif; ?>
