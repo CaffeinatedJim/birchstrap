@@ -6,7 +6,8 @@ Global Styles
 
 /* Hide elements */
 .skip,
-.block-search h2 {
+.block-search h2,
+.block .h2 {
 	display:none;
 }
 
