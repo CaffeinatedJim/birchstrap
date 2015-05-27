@@ -19,29 +19,28 @@
     <div class="skip"><a href="#main-content" title="Skip to Content">Skip to Content</a></div>
     <?php if (!empty($header)): ?><div class="container"><header id="header" class="row"><div class="col-sm-12"><?php print $header; ?></div></header></div><?php endif; ?>
     <?php if (!empty($hero)): ?><div class="container"><div class="row"><div id="hero" class="col-sm-12"><?php print $hero; ?></div></div></div><?php endif; ?>
-    <?php if (!empty($tabs)): ?><div class="container"><div class="row"><div class="tabs col-sm-12"><?php print $tabs; ?></div></div></div><?php endif; ?>
-    <?php if (!empty($messages)): ?><div class="container"><div class="row"><div class="messages col-sm-12"><?php print $messages; ?></div></div></div><?php endif; ?>
-    <?php if (!empty($help)): ?><div class="container"><div class="row"><div class="help col-sm-12"><?php print $help; ?></div></div></div><?php endif; ?>
-
     <div id="main-content" class="container">
-		  <?php if (!empty($title)): ?><div class="row"><div class="col-sm-12"><h1 class="title" id="page-title"><?php print $title; ?></h1></div></div><?php endif; ?>
       <div class="row">
         <?php if (!empty($left)): ?>
           <div id="sidebar-left" class="col-sm-3 sidebar"><?php print $left; ?></div>
         <?php endif; ?>
-        <div id="content" class="col-sm-9"><?php print $content; ?></div>
+        <div id="content" class="col-sm-9">
+          <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
+          <?php if (!empty($messages)): ?><div class="messages"><?php print $messages; ?></div><?php endif; ?>
+          <?php if (!empty($help)): ?><div class="help"><?php print $help; ?></div><?php endif; ?>
+          <?php if (!empty($title)): ?><h1><?php print $title; ?></h1><?php endif; ?>
+          <?php print $content; ?>
+        </div>
         <?php if (!empty($right)): ?>
           <div id="sidebar-right" class="col-sm-3 sidebar"><?php print $right; ?></div>
         <?php endif; ?>
       </div>
     </div>
-
     <?php print $closure; ?>
-    
     <footer id="page-footer" class="container">
       <div class="row">
         <div class="col-sm-12">
-			   <?php print $footer_message; ?>
+         <?php print $footer_message; ?>
          <?php if (!empty($footer)): print $footer; endif; ?>
         </div>
       </div>
