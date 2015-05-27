@@ -1,15 +1,10 @@
-; As of 20130923, this is the new base theme for heiexhibitors. Consider this like core and DO NOT MODIFY!
-; To create a new theme, create a sub theme and make your changes there. Example sub theme: mla14
-
 name = Birchstrap
-description = Base Theme using Bootstrap 2, for Drupal 6
+description = Base Theme using Bootstrap 3, for Drupal 6
 version = 1.0
 core = 6.x
 engine = phptemplate
 
 stylesheets[all][] = bootstrap/css/bootstrap.min.css
-stylesheets[all][] = bootstrap/css/bootstrap-responsive.css
-;stylesheets[all][] = bootstrap/css/bootstrap-responsive.v2.1.1.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/screen_0-480.css
 stylesheets[all][] = css/screen_481-767.css
@@ -20,8 +15,6 @@ stylesheets[print][] = css/print.css
 scripts[] = js/jquery.min.js
 scripts[] = bootstrap/js/bootstrap.min.js
 scripts[] = js/jquery-noconflict.js
-;scripts[] = js/html5shiv.js
-;scripts[] = js/respond/respond.min.js
 
 regions[header] = Header
 regions[navigation] = Navigation
