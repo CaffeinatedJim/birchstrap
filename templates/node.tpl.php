@@ -1,38 +1,10 @@
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <header>
-
-    <?php print render($title_prefix); ?>
-    <?php if (!$page && $title): ?>
-      <h1<?php print $title_attributes; ?>>
-        <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
-      </h1>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-
-    <?php if ($display_submitted): ?>
-      <span class="submitted">
-        <?php print $user_picture; ?>
-        <?php print $submitted; ?>
-      </span>
-    <?php endif; ?>
-    
-  </header>
-
-  <?php
-    // Hide now, render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    hide($content['field_tags']);
-    print render($content);
-  ?>
-
-  <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
-    <footer>
-      <?php print render($content['field_tags']); ?>
-      <?php print render($content['links']); ?>
-    </footer>
-  <?php endif; ?>
-
-  <?php print render($content['comments']); ?>
-
-</article>
+<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
+  <?php print $picture ?>
+  <?php if (!$page): ?><h1><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h1><?php endif; ?>
+  <div class="meta">
+    <?php if ($submitted): ?><span class="submitted"><?php print $submitted ?></span><?php endif; ?>
+    <?php if ($terms): ?><div class="terms terms-inline"><?php print $terms ?></div><?php endif;?>
+  </div>
+  <div class="content"><?php print $content ?></div>
+  <?php print $links; ?>
+</div>
